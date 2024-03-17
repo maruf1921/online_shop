@@ -1,5 +1,7 @@
 .item {
-  width: 350px;
+  flex: 1;
+  transition: 0.6s;
+  width: 300px;
 }
 .item p {
   margin: 6px 10px;
