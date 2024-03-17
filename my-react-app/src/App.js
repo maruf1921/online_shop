@@ -10,20 +10,62 @@ import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import LoginSignup from './Pages/LoginSignup';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Navbar from './Components/Navbar/Navbar';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Shop />,
+      element: (
+        <>
+          <Navbar></Navbar> <Shop />
+        </>
+      ),
     },
     {
       path: '/mens',
-      element: <div>Mens</div>,
+      element: (
+        <>
+          <Navbar></Navbar>
+          <div>Mens</div>
+        </>
+      ),
     },
     {
       path: '/womens',
-      element: <div>womans</div>,
+      element:(
+        <>
+        <Navbar></Navbar>
+        <div>womens</div>
+        </>
+      ),
+    },
+    {
+      path: '/kids',
+      element: (
+        <>
+          <Navbar></Navbar>
+          <div>kids</div>
+        </>
+      ),
+    },
+    {
+      path: '/cart',
+      element: (
+        <>
+          <Navbar></Navbar>
+          <div>cart</div>
+        </>
+      ),
+    },
+    {
+      path: '/login',
+      element: (
+        <>
+          <Navbar></Navbar>
+          <div>login</div>
+        </>
+      ),
     },
   ]);
   return <RouterProvider router={router} />;
