@@ -3,7 +3,7 @@ import './App.css';
 // import Navbar from '../Components/Navbar/Navbar';
 
 // import Navbar from './Components/Navbar/Navbar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import Shop from './Pages/Shop';
 import ShopCategory from './Pages/ShopCategory';
 import Product from './Pages/Product';
@@ -11,6 +11,10 @@ import Cart from './Pages/Cart';
 import LoginSignup from './Pages/LoginSignup';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
+import Footer from './Components/Footer/Footer';
+import men_banner from './Components/Assets/banner_mens.png';
+import women_banner from './Components/Assets/banner_women.png';
+import kids_banner from './Components/Assets/banner_kids.png';
 
 function App() {
   const router = createBrowserRouter([
@@ -27,16 +31,20 @@ function App() {
       element: (
         <>
           <Navbar></Navbar>
-          <div>Mens</div>
+          <div>
+            <img src={men_banner} alt="" />
+          </div>
+          <Footer />
         </>
       ),
     },
     {
       path: '/womens',
-      element:(
+      element: (
         <>
-        <Navbar></Navbar>
-        <div>womens</div>
+          <Navbar></Navbar>
+          <div>womens</div>
+          <Footer />
         </>
       ),
     },
@@ -46,6 +54,7 @@ function App() {
         <>
           <Navbar></Navbar>
           <div>kids</div>
+          <Footer />
         </>
       ),
     },
@@ -55,6 +64,7 @@ function App() {
         <>
           <Navbar></Navbar>
           <div>cart</div>
+          <Footer />
         </>
       ),
     },
@@ -63,9 +73,34 @@ function App() {
       element: (
         <>
           <Navbar></Navbar>
-          <div>login</div>
+          <LoginSignup />
+          <Footer />
         </>
       ),
+    },
+    {
+      path: '/product',
+      element: (
+        <>
+          <Navbar></Navbar>
+          <div>
+            <Outlet />
+          </div>
+          <Footer />
+        </>
+      ),
+      children: [
+        {
+          path: 'productId',
+          element: (
+            <>
+              <Navbar></Navbar>
+              <div>login</div>
+              <Footer />
+            </>
+          ),
+        },
+      ],
     },
   ]);
   return <RouterProvider router={router} />;
