@@ -32,7 +32,7 @@ function App() {
         <>
           <Navbar></Navbar>
           <div>
-            <img src={men_banner} alt="" />
+            <ShopCategory category="men" banner={men_banner}/>
           </div>
           <Footer />
         </>
