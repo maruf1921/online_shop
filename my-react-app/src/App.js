@@ -32,7 +32,7 @@ function App() {
         <>
           <Navbar></Navbar>
           <div>
-            <ShopCategory category="men" banner={men_banner}/>
+            <ShopCategory category="men" banner={men_banner} />
           </div>
           <Footer />
         </>
@@ -43,7 +43,9 @@ function App() {
       element: (
         <>
           <Navbar></Navbar>
-          <div>womens</div>
+          <div>
+            <ShopCategory category="women" banner={women_banner} />
+          </div>
           <Footer />
         </>
       ),
@@ -53,7 +55,9 @@ function App() {
       element: (
         <>
           <Navbar></Navbar>
-          <div>kids</div>
+          <div>
+            <ShopCategory category="kid" banner={kids_banner} />
+          </div>
           <Footer />
         </>
       ),
@@ -91,12 +95,12 @@ function App() {
       ),
       children: [
         {
-          path: 'productId',
+          path: ':productId',
           element: (
             <>
-              <Navbar></Navbar>
-              <div>login</div>
-              <Footer />
+              <div>
+                <Product />
+              </div>
             </>
           ),
         },

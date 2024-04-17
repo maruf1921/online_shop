@@ -5,7 +5,7 @@
 }
 .shopcategory-indexSort {
   display: flex;
-  margin: 0px 170px;
+  margin: 0px 30px;
   justify-content: space-between;
   align-items: center;
 }
@@ -14,14 +14,18 @@
   border-radius: 40px;
   border: 1px solid #888;
 }
+.shopcategory-sort img {
+  height: 25px;
+}
 .shopcategory-indexSort p span {
   font-weight: 600;
 }
 .shopcategory-products {
-  margin: 20px 170px;
+  margin: 20px auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 80px;
+  width: 95%;
 }
 .shopcategory-loadmore {
   display: flex;
