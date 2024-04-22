@@ -9,7 +9,7 @@ const ProductDisplay = props => {
   return (
     <div className="productdisplay">
       <div className="productdisplay-left">
-        <div className="productdisplay-img-list">
+        <div className="productdisplay-img-list" style={{ width: '150px' }}>
           <div>
             <img src={product.image} alt="" />
           </div>
