@@ -67,7 +67,7 @@ function App() {
       element: (
         <>
           <Navbar></Navbar>
-          <div>cart</div>
+          <Cart />
           <Footer />
         </>
       ),
