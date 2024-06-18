@@ -1,7 +1,8 @@
 .shopcategory-banner {
   display: block;
   margin: 30px auto;
-  width: 82%;
+  width: 70%;
+  height: 350px;
 }
 .shopcategory-indexSort {
   display: flex;
@@ -9,13 +10,19 @@
   justify-content: space-between;
   align-items: center;
 }
-.shopcategory-sort {
+.shopcategory-sort button {
   padding: 10px 20px;
   border-radius: 40px;
   border: 1px solid #888;
+  cursor: pointer;
+  
+}
+.shopcategory-sort button:hover{
+  background-color: #f4511e;
 }
 .shopcategory-sort img {
-  height: 25px;
+  height: 20px;
+  width: 25px;
 }
 .shopcategory-indexSort p span {
   font-weight: 600;
@@ -27,7 +34,7 @@
   row-gap: 80px;
   width: 95%;
 }
-.shopcategory-loadmore {
+.shopcategory-loadmore button{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +46,12 @@
   color: #787878;
   font-size: 18px;
   font-weight: 500;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.shopcategory-loadmore button:hover{
+  background-color: #f4511e;
+  color: #ededed;
 }
 @media (max-width: 1280px) {
   .shopcategory-banner {
@@ -64,7 +77,7 @@
   .shopcategory-products .item {
     margin: auto;
   }
-  .shopcategory-loadmore {
+  .shopcategory-loadmore button{
     margin: 100px auto;
     width: 200px;
     height: 60px;
@@ -78,7 +91,7 @@
   .shopcategory-products {
     width: 95%;
   }
-  .shopcategory-loadmore {
+  .shopcategory-loadmore button {
     margin: 60px auto;
     width: 150px;
     height: 40px;

@@ -1,4 +1,4 @@
-.navbar{
+/* .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -6,6 +6,14 @@
     box-shadow: 0 1px 3px -2px #000;
     margin-bottom: 1px;
     background-attachment: white;
+}
+.navbar-name h1{
+    font-size: 20px;
+}
+.navbar-name p{
+    font-size: 15px;
+    color: #ff4141;
+    margin-left: 10px;
 }
 .nav-logo{
     width: 200px;
@@ -21,6 +29,58 @@
         width: 150px;
     }
     .nav-profile{
+        width: 60px;
+    }
+} */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 60px;
+    box-shadow: 0 1px 3px -2px #000;
+    margin-bottom: 1px;
+    background-color: white; /* Corrected from background-attachment */
+}
+
+.left-side {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-name {
+    display: flex;
+    flex-direction: column; /* Arrange h1 and p vertically */
+    justify-content: center; /* Center align vertically within their container */
+    margin-left: 10px; /* Space between the logo and the text */
+}
+
+.navbar-name h1 {
+    font-size: 20px;
+    margin: 0; /* Remove default margin */
+}
+
+.navbar-name p {
+    font-size: 15px;
+    color: #ff4141;
+    margin: 0; /* Remove default margin */
+}
+
+.nav-logo {
+    width: 80px;
+}
+
+.nav-profile {
+    width: 75px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+    .nav-logo {
+        width: 150px;
+    }
+    .nav-profile {
         width: 60px;
     }
 }

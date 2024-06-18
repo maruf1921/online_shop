@@ -17,10 +17,12 @@ const ShopCategory = props => {
           <span>Showing 1-12</span> Out of 36 products
         </p>
         <div className="shopcategory-sort">
+        <button>
           Sort By{' '}
           <div>
             <img src={dropdown_icon} alt="" />
           </div>
+          </button>
         </div>
       </div>
       <div className="shopcategory-products">
@@ -41,7 +43,9 @@ const ShopCategory = props => {
           }
         })}
       </div>
-      <div className="shopcategory-loadmore"> Explore More</div>
+      <div className="shopcategory-loadmore">
+      <button>Explore More</button> 
+      </div>
     </div>
   );
 };
