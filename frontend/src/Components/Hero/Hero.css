@@ -1,16 +1,26 @@
 .hero {
   /* height: 100vh; */
-  background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+  /* background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%); */
+  background: linear-gradient(180deg, #ff9d41, #e1ffea22 60%);
+  
   display: flex;
 }
+.hero-right img{
+  
+  height: 250px;
+  width: auto;
+
+}
 .hero-left {
+  padding: 5px 5px;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2px;
+  gap: 5px;
   padding-left: 180px;
   line-height: 1.1;
+  margin: 10px;
 }
 .hero-left h2 {
   color: #090909;
