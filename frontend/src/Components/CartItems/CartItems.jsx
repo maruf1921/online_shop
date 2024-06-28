@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import './CartItems.css';
 import { ShopContext } from '../../Context/ShopContext';
 import remove_icon from '../Assets/cart_cross_icon.png';
@@ -8,12 +8,30 @@ const CartItems = () => {
   const { getTotalCartAmount, all_product, cartItems, removeFromCart } =
     useContext(ShopContext);
   const navigate = useNavigate();
+  const [promoCode, setPromoCode] = useState('');
+  const [totalAmount, setTotalAmount] = useState(getTotalCartAmount());
+  const [promoCodeApplied, setPromoCodeApplied] = useState(false);
+
+  // Update totalAmount whenever cartItems change
+  useEffect(() => {
+    setTotalAmount(getTotalCartAmount());
+  }, [cartItems, getTotalCartAmount]);
 
   const handleCheckout = () => {
     navigate('/checkout');
   };
 
-  console.log(getTotalCartAmount());
+  const applyPromoCode = () => {
+    if (promoCode === 'DIIT' && !promoCodeApplied) {
+      setTotalAmount(totalAmount - 5);
+      setPromoCodeApplied(true);
+      alert('Promo code applied successfully!');
+    } else if (promoCodeApplied) {
+      alert('Promo code has already been applied.');
+    } else {
+      alert('Invalid promo code');
+    }
+  };
 
   return (
     <div className="cartitems">
@@ -70,7 +88,7 @@ const CartItems = () => {
             <hr />
             <div className="cartitems-total-item">
               <h3>Total</h3>
-              <h3>${getTotalCartAmount()}</h3>
+              <h3>${totalAmount}</h3>
             </div>
           </div>
           <button onClick={handleCheckout}>PROCEED TO CHECKOUT</button>
@@ -78,8 +96,13 @@ const CartItems = () => {
         <div className="cartitem-promocode">
           <p>If you have a promo code, Enter it here</p>
           <div className="cartitems-promobox">
-            <input type="text" placeholder="promo code" />
-            <button>Submit</button>
+            <input
+              type="text"
+              placeholder="promo code"
+              value={promoCode}
+              onChange={(e) => setPromoCode(e.target.value)}
+            />
+            <button onClick={applyPromoCode}>Submit</button>
           </div>
         </div>
       </div>
