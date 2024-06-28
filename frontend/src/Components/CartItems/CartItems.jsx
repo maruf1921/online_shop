@@ -11,6 +11,8 @@ const CartItems = () => {
   const [promoCode, setPromoCode] = useState('');
   const [totalAmount, setTotalAmount] = useState(getTotalCartAmount());
   const [promoCodeApplied, setPromoCodeApplied] = useState(false);
+  const [address, setAddress] = useState('');
+  const [mobileNumber, setMobileNumber] = useState('');
 
   // Update totalAmount whenever cartItems change
   useEffect(() => {
@@ -18,7 +20,8 @@ const CartItems = () => {
   }, [cartItems, getTotalCartAmount]);
 
   const handleCheckout = () => {
-    navigate('/checkout');
+    // Navigate to checkout page and pass address, mobile number, and total amount
+    navigate('/checkout', { state: { address, mobileNumber, totalAmount } });
   };
 
   const applyPromoCode = () => {
@@ -90,6 +93,26 @@ const CartItems = () => {
               <h3>Total</h3>
               <h3>${totalAmount}</h3>
             </div>
+          </div>
+          <div className="cartitems-address">
+            <label htmlFor="address">Address:</label>
+            <input
+              type="text"
+              id="address"
+              placeholder="Enter your address"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            />
+          </div>
+          <div className="cartitems-mobile">
+            <label htmlFor="mobileNumber">Mobile Number:</label>
+            <input
+              type="text"
+              id="mobileNumber"
+              placeholder="Enter your mobile number"
+              value={mobileNumber}
+              onChange={(e) => setMobileNumber(e.target.value)}
+            />
           </div>
           <button onClick={handleCheckout}>PROCEED TO CHECKOUT</button>
         </div>
