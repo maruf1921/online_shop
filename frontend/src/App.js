@@ -15,6 +15,9 @@ import Footer from './Components/Footer/Footer';
 import men_banner from './Components/Assets/banner_mens.png';
 import women_banner from './Components/Assets/banner_women.png';
 import kids_banner from './Components/Assets/banner_kids.png';
+import Checkout from './Pages/Checkout';
+
+
 
 function App() {
   const router = createBrowserRouter([
@@ -78,6 +81,16 @@ function App() {
         <>
           <Navbar></Navbar>
           <LoginSignup />
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: '/checkout',
+      element: (
+        <>
+          <Navbar />
+          <Checkout />
           <Footer />
         </>
       ),

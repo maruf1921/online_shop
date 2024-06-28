@@ -8,11 +8,20 @@ const path = require("path");
 const cors = require("cors");
 const { error } = require("console");
 const { type } = require("os");
+const stripeRoutes = require('./stripe');
 
 app.use(express.json());
 app.use(cors());
 // Database connection With MongoDB
 mongoose.connect("mongodb+srv://maruf1921:ttJwZGTvwoc2jmBr@cluster0.e2whn1h.mongodb.net/")
+
+
+// Stripe setup
+
+app.use('/api/stripe', stripeRoutes);
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 // API Creation
 
