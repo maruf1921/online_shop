@@ -11,6 +11,7 @@ const CheckoutForm = () => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
+  const [orderConfirmed, setOrderConfirmed] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -43,15 +44,24 @@ const CheckoutForm = () => {
     }
   };
 
+  const handleCashOnDelivery = () => {
+    // Handle cash on delivery logic here
+    setOrderConfirmed(true);
+  };
+
   return (
     <form onSubmit={handleSubmit} className="checkout-form">
       <h2>Checkout</h2>
       <CardElement className="StripeElement" />
       <button type="submit" disabled={!stripe || isProcessing}>
-        {isProcessing ? 'Processing...' : 'Pay'}
+        {isProcessing ? 'Processing...' : 'Card Pay'}
+      </button>
+      <button type="button" onClick={handleCashOnDelivery} className="cash-on-delivery-btn">
+        Cash on Delivery
       </button>
       {error && <div className="error">{error}</div>}
       {success && <div className="success">Payment Successful!</div>}
+      {orderConfirmed && <div className="order-confirmation">Order Confirmed!</div>}
     </form>
   );
 };

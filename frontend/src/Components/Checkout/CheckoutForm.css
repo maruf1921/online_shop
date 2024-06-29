@@ -54,3 +54,24 @@
   margin-top: 1em;
   text-align: center;
 }
+
+
+/* CheckoutForm.css */
+.cash-on-delivery-btn {
+  background-color: #f0ad4e;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.cash-on-delivery-btn:hover {
+  background-color: #ec971f;
+}
+
+.order-confirmation {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+}
