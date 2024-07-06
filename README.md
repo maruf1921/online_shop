@@ -1,6 +1,6 @@
 # E-Commerce Website
 
-This is an e-commerce website built with Node.js, Express, and MongoDB. The website allows users to view products, add products to their cart, and manage their accounts.
+This is an e-commerce website built with JavaScript, HTML, CSS, Node.js, Express, and MongoDB. The website allows users to view products, add products to their cart, and manage their accounts.
 
 ## Features
 
@@ -11,7 +11,9 @@ This is an e-commerce website built with Node.js, Express, and MongoDB. The webs
 - APIs for new collections and popular items
 
 ## Technologies Used
-
+- javaScript
+- HTML
+- CSS
 - Node.js
 - Express
 - MongoDB
