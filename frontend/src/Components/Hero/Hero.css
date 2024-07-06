@@ -1,6 +1,4 @@
-.hero {
-  /* height: 100vh; */
-  /* background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%); */
+/* .hero {
   background: linear-gradient(180deg, #ff9d41, #e1ffea22 60%);
   
   display: flex;
@@ -143,5 +141,90 @@
     width: 200px;
     height: 45px;
     font-size: 14px;
+  }
+} */
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #f0f0f0; */
+  padding-top: 50px;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for better visibility */
+}
+
+.carousel .legend {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.2rem; /* Adjusted font size */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.carousel .legend:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.carousel .slide {
+  position: relative;
+}
+
+.carousel .control-arrow {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel .control-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel .control-arrow:hover:before {
+  color: white;
+}
+
+.carousel .control-prev {
+  left: 10px;
+}
+
+.carousel .control-next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+      max-width: 100%;
+  }
+
+  .carousel .legend {
+      font-size: 1rem; /* Adjusted font size for smaller screens */
   }
 }
