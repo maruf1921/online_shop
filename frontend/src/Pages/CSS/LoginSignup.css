@@ -1,9 +1,9 @@
 .loginsignup {
   width: 100%;
-  /* height: ; */
   background: #fce3fe;
   padding-top: 100px;
 }
+
 .loginsignup-container {
   width: 500px;
   height: 600px;
@@ -11,15 +11,18 @@
   margin: auto;
   padding: 40px 60px;
 }
+
 .loginsignup-container h1 {
   margin: 20px 0px;
 }
+
 .loginsignup-fields {
   display: flex;
   flex-direction: column;
   gap: 29px;
   margin-top: 30px;
 }
+
 .loginsignup-fields input {
   height: 72px;
   width: 100%;
@@ -29,6 +32,7 @@
   color: #5c5c5c;
   font-size: 18px;
 }
+
 .loginsignup-container button {
   width: 525px;
   height: 72px;
@@ -40,20 +44,24 @@
   font-weight: 500;
   cursor: pointer;
 }
+
 button:hover {
   opacity: 0.8;
 }
+
 .loginsignup-login {
   margin-top: 20px;
   color: #5c5c5c;
   font-size: 18px;
   font-weight: 500;
 }
+
 .loginsignup-login span {
   color: #ff4141;
   font-weight: 600;
   cursor: pointer;
 }
+
 .loginsignup-agree {
   display: flex;
   align-items: center;
@@ -63,6 +71,21 @@ button:hover {
   font-size: 18px;
   font-weight: 500;
 }
+
+.loginsignup-forget-password {
+  margin-top: 10px;
+  color: #5c5c5c;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.loginsignup-forget-password span {
+  color: #ff4141;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 @media (max-width: 1280px) {
   .loginsignup {
     padding-top: 50px;
@@ -93,7 +116,11 @@ button:hover {
     font-size: 14px;
     gap: 10px;
   }
+  .loginsignup-forget-password {
+    font-size: 14px;
+  }
 }
+
 @media (max-width: 800px) {
   .loginsignup-container {
     padding: 20px 30px;
@@ -110,5 +137,8 @@ button:hover {
   .loginsignup-container button {
     height: 50px;
     font-size: 16px;
+  }
+  .loginsignup-forget-password {
+    font-size: 12px;
   }
 }

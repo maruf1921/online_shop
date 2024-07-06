@@ -16,6 +16,8 @@ import men_banner from './Components/Assets/banner_mens.png';
 import women_banner from './Components/Assets/banner_women.png';
 import kids_banner from './Components/Assets/banner_kids.png';
 import Checkout from './Pages/Checkout';
+import ForgetPassword from './Pages/ForgetPassword';
+import ResetPassword from './Pages/ResetPassword';
 
 
 
@@ -81,6 +83,26 @@ function App() {
         <>
           <Navbar></Navbar>
           <LoginSignup />
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: '/forget-password',
+      element: (
+        <>
+          <Navbar></Navbar>
+          <ForgetPassword />
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: '/reset-password',
+      element: (
+        <>
+          <Navbar></Navbar>
+          <ResetPassword />
           <Footer />
         </>
       ),
