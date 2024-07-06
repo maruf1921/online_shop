@@ -4,6 +4,8 @@
   padding: 16px;
   box-shadow: 0 1px 3px -2 black;
   align-items: center;
+  background: linear-gradient(180deg, #fc7d07, #e1ffea22 85%);
+
 }
 .nav-logo {
   display: flex;

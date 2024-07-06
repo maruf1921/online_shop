@@ -10,8 +10,9 @@ const Offers = () => {
         <p>ONLY ONE BEST SELLERS PRODUCTS</p>
         <button>Click Now</button>
       </div>
-      <div className="offers-right"></div>
+      <div className="offers-right">
       <img src={exclusive_image} alt="" />
+      </div>
     </div>
   );
 };
